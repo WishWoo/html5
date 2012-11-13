@@ -1,0 +1,41 @@
+<!DOCTYPE HTML> 
+<html> 
+<body> 
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"> 
+Your browser does not support the canvas element. 
+</canvas> 
+ 
+<script type="text/javascript"> 
+//详细语法及参数介绍
+/*
+createLinearGradient(xStart, yStart, xEnd, yEnd)
+参数		描述
+xStart, yStart	渐变的起始点的坐标。
+xEnd, yEnd	渐变的结束点的坐标。
+*/
+
+/*
+addColorStop(offset, color)
+参数	描述
+offset	这是一个范围在 0.0 到 1.0 之间的浮点值，表示渐变的开始点和结束点之间的一部分。offset 为 0 对应开始点，offset 为 1 对应结束点。
+color	以一个 CSS 颜色字符串的方式，表示在指定 offset 显示的颜色。沿着渐变某一点的颜色是根据这个值以及任何其他的颜色色标来插值的。
+*/
+
+/*
+fillRect(x, y, width, height)
+参数
+参数	描述
+x, y	矩形的左上角的坐标。
+width, height	矩形的大小。
+*/
+var c=document.getElementById("myCanvas"); 
+var cxt=c.getContext("2d"); 
+var grd=cxt.createLinearGradient(0,0,175,50); 
+grd.addColorStop(0.9,"#FF0000"); 
+grd.addColorStop(0.5,"#0000FF"); 
+cxt.fillStyle=grd; 
+cxt.fillRect(0,0,175,50)
+</script> 
+ 
+</body> 
+</html> 

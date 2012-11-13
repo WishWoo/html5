@@ -1,0 +1,29 @@
+<!DOCTYPE HTML> 
+<html> 
+<body> 
+ 
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"> 
+Your browser does not support the canvas element. 
+</canvas> 
+
+<script type="text/javascript">  
+var c=document.getElementById("myCanvas"); 
+var cxt=c.getContext("2d"); 
+cxt.fillStyle="#FF0000"; 
+cxt.beginPath(); 
+cxt.arc(70,18,15,0,Math.PI*2,true);
+/*
+x, y	描述弧的圆形的圆心的坐标。
+radius	描述弧的圆形的半径。
+startAngle, endAngle	
+沿着圆指定弧的开始点和结束点的一个角度。这个角度用弧度来衡量。
+沿着 X 轴正半轴的三点钟方向的角度为 0，角度沿着逆时针方向而增加。
+counterclockwise  
+弧沿着圆周的逆时针方向（TRUE）还是顺时针方向（FALSE）遍历。
+*/
+cxt.closePath(); 
+cxt.fill(); 
+</script>
+
+</body>
+</html>

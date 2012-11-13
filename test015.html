@@ -1,0 +1,16 @@
+<!DOCTYPE HTML> 
+<html> 
+<body> 
+<!--
+keygen key-pair generator private keypublic keyclient certificate
+当提交表单的时候，会生成两个键，一个是私钥，一个是公钥。私钥存储于客户端，公钥则被发送到服务器。
+-->
+<form action="./file/1.php" method="get"> 
+Username: 
+<input type="text" name="usr_name" /> 
+Encryption: 
+<keygen name="security" /> 
+<input type="submit" /> 
+</form> 
+</body> 
+</html> 
