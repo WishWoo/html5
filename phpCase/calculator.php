@@ -25,7 +25,7 @@
 $y0=make_safe($_REQUEST["y0"]);
 $y1=make_safe($_REQUEST["y1"]);
 $y=make_safe($_REQUEST["y"]);
-
+echo "test";
 function make_safe($variable) {
 $variable = addslashes(trim($variable));
 return $variable;
