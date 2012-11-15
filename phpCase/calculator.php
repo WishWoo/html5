@@ -22,13 +22,22 @@
   <p> </p>
 </form>
 <?php
+$y0=make_safe($_REQUEST["y0"]);
+$y1=make_safe($_REQUEST["y1"]);
+$y=make_safe($_REQUEST["y"]);
+
 function make_safe($variable) {
 $variable = addslashes(trim($variable));
 return $variable;
 }
-$y0=make_safe($_REQUEST["y0"]);
-$y1=make_safe($_REQUEST["y1"]);
-$y=make_safe($_REQUEST["y"]);
+
+function checking_format()
+{
+if($y0>=a&&$y0<=z){
+
+}
+}
+
 if ($y0 != "")
 {
 switch($y0)
